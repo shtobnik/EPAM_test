@@ -1,29 +1,17 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="mainModule">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>With angular</title>
+    <title>EPAM test</title>
     <link rel="stylesheet" href="css/main.css">
-    <script type="text/javascript" src="js/libs/jquery-2.1.4.min.js"></script>
-    <script type="text/javascript" src="js/libs/angular.min.js"></script>
-    <script type="text/javascript" src="js/angular/min/app-min.js"></script>
 </head>
-<body ng-controller="MainController">
+<body>
 
-
-<div class="content">
-    <div class="info-box" ng-repeat="item in elements track by $index">
-        <div class="info-box-i">
-            <div class="image-wrap">
-                <img src='/img/{{item.img}}'/>
-            </div>
-            <div class="info-content">
-                <h2>{{item.title}}</h2>
-                <p class="description">{{item.description}}</p>
-                <p class="note">{{item.note}}</p>
-                <a class="link-to-order" href='${productUrl}'>Find a store</a>
-            </div>
-        </div>
+<div class="about-links-block">
+    <h2>Задача выполнена на двух разных фреймвоках. Посмотрите пожалуйста оба:</h2>
+    <div class="about-links-wrap">
+        <a class="about-links" href="with-jquery.html">With jquery</a>
+        <a class="about-links" href="with-angular.html">With angular</a>
     </div>
 </div>
 

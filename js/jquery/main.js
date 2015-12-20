@@ -13,11 +13,9 @@ $(window).on('load', function() {
             });
 
             infoBox.append('<div class="buttons"></div>'); // Переносим кнопки управления слайдером в отдельный блок и в нужное мксто
+            $('.buttons').append($('.slick-arrow'));
             infoBox.append('<div class="link-to-order">Find a store</div>'); // Создаем псевдо кнопку для того, чтобы настоящая кнопка не мигала при переключении слайдов
-            $('.info-box-i').each(function(index, elem) {
-                $(elem).find('.info-content').append('<a href="#" class="show-more-link">show more</a>'); // Добавляем ссылку "Показать еще"
-            });
-            $(".buttons").append($('.slick-arrow'));
+
             $('.slick-prev').html('Prev');
             $('.slick-arrow').on('click', function(e) {
                 $(e.currentTarget).parents('#info_box').find('.slick-slide').find('.link-to-order').each(function(index, elem) {

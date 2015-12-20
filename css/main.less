@@ -1,5 +1,41 @@
 @import url(reset.less);
 @import url(variables.less);
+.about-links-block {
+	margin: 20px auto 0;
+	width: 500px;
+	text-align: center;
+	h2 {
+		font: bold 22px/22px Times;
+		margin-bottom: 20px;
+	}
+	.about-links {
+		background-color: @gray;
+		border-radius: 5px;
+		color: @white;
+		display: inline-block;
+		padding: 5px 10px;
+		text-decoration: none;
+		vertical-align: top;
+		&:first-child {
+			margin-right: 10px;
+		}
+		&:hover {
+			background-color: @light-gray;
+			color: @white;
+			text-decoration: none;
+			&:active {
+				background-color: @gray;
+			}
+		}
+		&:active {
+			background-color: @gray;
+			box-shadow: inset 2px 3px 6px 0 @dark-gray;
+			color: @white;
+			padding: 7px 8px 3px 12px;
+			text-decoration: none;
+		}
+	}
+}
 .content {
 	background: url('../../img/comp_plate_graybasic.png') no-repeat 0 0;
 	box-sizing: border-box;
@@ -11,6 +47,7 @@
 .info-box {
 	height: 100%;
 	overflow: hidden;
+	position: relative;
 	margin: 0;
 	text-align: left;
 	.slick-list {
@@ -115,6 +152,7 @@
 		vertical-align: top;
 		.image-wrap {
 			height: 200px;
+			margin-bottom: 10px;
 			text-align: center;
 			width: 312px;
 			-webkit-transition: height 0.5s ease-out;
@@ -170,6 +208,7 @@
 			padding-top: 10px;
 			.image-wrap {
 				height: 0;
+				margin: 0;
 			}
 			.info-content {
 				.description {
