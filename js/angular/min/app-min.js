@@ -1,0 +1,1 @@
+angular.module("mainModule",[]);var app=angular.module("mainModule");app.controller("MainController",["$scope","$http",function(n,o){o({url:"../../../src/info_box.json"}).then(function a(o){n.elements=o.data})}]);

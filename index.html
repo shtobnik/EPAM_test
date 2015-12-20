@@ -1,39 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="mainModule">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>With angular</title>
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/slick.css">
-    <link rel="stylesheet" href="css/slick-theme.css">
-
-
+    <script type="text/javascript" src="js/libs/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/libs/angular.min.js"></script>
+    <script type="text/javascript" src="js/angular/min/app-min.js"></script>
 </head>
-<body>
+<body ng-controller="MainController">
 
-
-<script id="info_box_template" type="text/x-jquery-tmpl">
-    <div class="info-box-i">
-        <div class="image-wrap">
-            <img src='../img/${img}'></img>
-        </div>
-        <div class="info-content">
-            <h2>${title}</h2>
-            <p class="description">${description}</p>
-            <p class="note">${note}</p>
-            <a class="link-to-order" href='${productUrl}'>Find a store</a>
-        </div>
-    </div>
-</script>
 
 <div class="content">
-    <div id="info_box" class="info-box"></div>
+    <div class="info-box" ng-repeat="item in elements track by $index">
+        <div class="info-box-i">
+            <div class="image-wrap">
+                <img src='/img/{{item.img}}'/>
+            </div>
+            <div class="info-content">
+                <h2>{{item.title}}</h2>
+                <p class="description">{{item.description}}</p>
+                <p class="note">{{item.note}}</p>
+                <a class="link-to-order" href='${productUrl}'>Find a store</a>
+            </div>
+        </div>
+    </div>
 </div>
-
-<script type="text/javascript" src="js/libs/jquery-2.1.4.min.js"></script>
-<script type="text/javascript" src="js/min/main-min.js"></script>
-<script type="text/javascript" src="js/libs/jquery.tmpl.min.js"></script>
-<script type="text/javascript" src="js/libs/slick.min.js"></script>
 
 </body>
 </html>
